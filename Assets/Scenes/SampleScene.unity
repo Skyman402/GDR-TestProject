@@ -225,16 +225,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!1 &273401117 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9172604979521072507, guid: 68d60e24f02165a4980e98670682fc22, type: 3}
-  m_PrefabInstance: {fileID: 1765705235}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &350388180 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9172604979521072507, guid: 68d60e24f02165a4980e98670682fc22, type: 3}
-  m_PrefabInstance: {fileID: 495590793}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &387714480
 GameObject:
   m_ObjectHideFlags: 0
@@ -244,9 +234,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 387714481}
-  - component: {fileID: 387714482}
   m_Layer: 0
-  m_Name: Points
+  m_Name: Circles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -272,19 +261,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &387714482
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 387714480}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &495590793
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -354,7 +330,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9172604979521072507, guid: 68d60e24f02165a4980e98670682fc22, type: 3}
       propertyPath: m_TagString
-      value: Enemy
+      value: Circle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68d60e24f02165a4980e98670682fc22, type: 3}
@@ -363,19 +339,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4050774419876795643, guid: 68d60e24f02165a4980e98670682fc22, type: 3}
   m_PrefabInstance: {fileID: 495590793}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &495590798
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 350388180}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da82c8e1a6263e34c89dd23592eba688, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  restart: {fileID: 0}
 --- !u!1 &633103939
 GameObject:
   m_ObjectHideFlags: 0
@@ -387,7 +350,7 @@ GameObject:
   - component: {fileID: 633103940}
   - component: {fileID: 633103941}
   m_Layer: 5
-  m_Name: RestartB
+  m_Name: RestartRoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -426,7 +389,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae9b8c4fdf586c14392b64814a5dac1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  button: {fileID: 2085473928}
+  _button: {fileID: 2085473928}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -699,16 +662,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   couterText: {fileID: 917922916}
---- !u!1 &994700052 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9172604979521072507, guid: 68d60e24f02165a4980e98670682fc22, type: 3}
-  m_PrefabInstance: {fileID: 1543819118}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1020411766 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9172604979521072507, guid: 68d60e24f02165a4980e98670682fc22, type: 3}
-  m_PrefabInstance: {fileID: 1216733862892462865}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1115285319
 GameObject:
   m_ObjectHideFlags: 0
@@ -721,7 +674,7 @@ GameObject:
   - component: {fileID: 1115285322}
   - component: {fileID: 1115285321}
   m_Layer: 5
-  m_Name: Restart
+  m_Name: RestartText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -925,7 +878,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9172604979521072507, guid: 68d60e24f02165a4980e98670682fc22, type: 3}
       propertyPath: m_TagString
-      value: Enemy
+      value: Circle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68d60e24f02165a4980e98670682fc22, type: 3}
@@ -934,19 +887,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4050774419876795643, guid: 68d60e24f02165a4980e98670682fc22, type: 3}
   m_PrefabInstance: {fileID: 1543819118}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1543819123
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 994700052}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da82c8e1a6263e34c89dd23592eba688, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  restart: {fileID: 0}
 --- !u!1001 &1765705235
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1016,7 +956,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9172604979521072507, guid: 68d60e24f02165a4980e98670682fc22, type: 3}
       propertyPath: m_TagString
-      value: Enemy
+      value: Circle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68d60e24f02165a4980e98670682fc22, type: 3}
@@ -1025,19 +965,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4050774419876795643, guid: 68d60e24f02165a4980e98670682fc22, type: 3}
   m_PrefabInstance: {fileID: 1765705235}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1765705240
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 273401117}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da82c8e1a6263e34c89dd23592eba688, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  restart: {fileID: 0}
 --- !u!1 &1838796674
 GameObject:
   m_ObjectHideFlags: 0
@@ -1234,7 +1161,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9172604979521072507, guid: 68d60e24f02165a4980e98670682fc22, type: 3}
       propertyPath: m_TagString
-      value: Enemy
+      value: Circle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68d60e24f02165a4980e98670682fc22, type: 3}
@@ -1243,24 +1170,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4050774419876795643, guid: 68d60e24f02165a4980e98670682fc22, type: 3}
   m_PrefabInstance: {fileID: 1877904057}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1919704869 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9172604979521072507, guid: 68d60e24f02165a4980e98670682fc22, type: 3}
-  m_PrefabInstance: {fileID: 1877904057}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1919704873
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1919704869}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da82c8e1a6263e34c89dd23592eba688, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  restart: {fileID: 0}
 --- !u!1 &2085473928
 GameObject:
   m_ObjectHideFlags: 0
@@ -1415,6 +1324,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 387714481}
     m_Modifications:
+    - target: {fileID: 2942408423085062126, guid: 68d60e24f02165a4980e98670682fc22, type: 3}
+      propertyPath: restart
+      value: 
+      objectReference: {fileID: 387714480}
     - target: {fileID: 4050774419876795643, guid: 68d60e24f02165a4980e98670682fc22, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -1459,17 +1372,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5773347632533318841, guid: 68d60e24f02165a4980e98670682fc22, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 9172604979521072507, guid: 68d60e24f02165a4980e98670682fc22, type: 3}
       propertyPath: m_Name
       value: Circles1
       objectReference: {fileID: 0}
     - target: {fileID: 9172604979521072507, guid: 68d60e24f02165a4980e98670682fc22, type: 3}
       propertyPath: m_TagString
-      value: Enemy
+      value: Circle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68d60e24f02165a4980e98670682fc22, type: 3}
@@ -1478,16 +1387,3 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4050774419876795643, guid: 68d60e24f02165a4980e98670682fc22, type: 3}
   m_PrefabInstance: {fileID: 1216733862892462865}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2942408423085062126
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1020411766}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da82c8e1a6263e34c89dd23592eba688, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  restart: {fileID: 387714480}

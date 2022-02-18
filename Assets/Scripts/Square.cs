@@ -1,17 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using System;
-
 
 public class Square : MonoBehaviour
 {
-    public static event Action CirclePicked = delegate { };
-    private Rigidbody rb;
-    
+    private Camera _camera;
+
     private void Start()
     {
-        rb = GetComponent<Rigidbody>();
+        _camera = Camera.main;
     }
 
     private void OnMouseDrag()
@@ -19,19 +14,17 @@ public class Square : MonoBehaviour
         transform.position = GetMousePos();
     }
 
-    Vector2 GetMousePos()
-    {
-        var mousePos= Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        return mousePos;
-    }
-
     private void OnTriggerEnter(Collider collision)
     {
-        if(collision.tag.Equals( "Enemy"))
+        if(collision.tag.Equals( "Circle"))
         {
-            CirclePicked();
             Destroy(collision.gameObject);
         }
     }
-    
+
+    private Vector2 GetMousePos()
+    {
+        var mousePos=_camera.ScreenToWorldPoint(Input.mousePosition);
+        return mousePos;
+    }
 }

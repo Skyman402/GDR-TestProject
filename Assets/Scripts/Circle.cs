@@ -1,16 +1,14 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
-
 
 public class Circle : MonoBehaviour
 {
-    public Text couterText;
-    public static int point;
 
-    private void Update()
+    private void OnTriggerEnter(Collider collision)
     {
-        couterText.text = "Circle picked: " + point;
+        if (collision.CompareTag("Player"))
+        {
+            GameData.AddCircle();
+            Destroy(gameObject);
+        }
     }
 }
